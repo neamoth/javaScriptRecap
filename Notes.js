@@ -28,9 +28,10 @@ let x = "Neamoth"
 // Block Scope
 
 {
-   let scope = 2;
-   console.log(scope + " inside the block")
+   let x = 2;
+   console.log(x + " inside the block")
+   // It will not be re-declared on global space
 }
 
-console.log(scope)
+console.log(x) 
 //ReferenceError - which is scope reference can not be defined
