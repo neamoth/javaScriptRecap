@@ -174,3 +174,37 @@ Object
    console.log(person.firstName + " " + person.lastName) // print <fullName></fullName>
    console.log("Person is an: "+ typeof(person))
 }
+
+{
+   /*
+      Function
+   */
+   function displayInput(){
+      console.log("Option 1: Add ")
+      console.log("Option 2: Sub ")
+      console.log("Option 3: Mult ")
+      console.log("Option 4: Div ")
+   }
+      displayInput()
+      let option = prompt("Enter a number to continue: ")
+      
+      function calculator(option, a, b){
+         let result
+         if(option == 1){
+            result = a+b
+         }
+         if(option == 2){
+            result = a-b
+         }
+         if(option == 3){
+            result = a*b
+         }
+         if(option == 4){
+            result = a/b
+         }
+         console.log(result)
+      }
+      let a = parseInt(prompt("Enter a number: "))
+      let b = parseInt(prompt("Enter b number: "))
+      //calculator(option, a, b);
+}
