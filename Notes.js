@@ -245,3 +245,63 @@ Object
    */
 
 }
+{
+   // event practices 
+   const person = {
+      firstName :"Khadiza",
+      lastName: "Noor",
+      age: "2 Month and 13 Days",
+      fathersName: "MD. Neamoth Ullah"
+   }
+   function fullName(){
+      document.getElementById('name').innerHTML = person.firstName + " " + person.lastName
+   }
+   function age(){
+      document.getElementById('age').innerHTML = person.lastName + "'s Age is: "+ person.age;
+   }
+   function fathersName(){
+      document.getElementById('fathersName').innerHTML = person.fathersName + " is the father of, " + person.lastName
+   }
+   function clearAll(){
+      document.getElementById('name').innerHTML = ''
+      document.getElementById('age').innerHTML = ''
+      document.getElementById('fathersName').innerHTML = ''
+   }
+}
+{
+   // String practice
+
+   let name = " Neamoth is a Good father          ";
+   document.getElementById('display').innerHTML = name
+   document.getElementById('display2').innerHTML ="Repeat: "+ name.repeat(2)
+   document.getElementById('display3').innerHTML ="Replace: "+ name.replace("Neamoth is good boy")
+}
+{
+   //Search With Practices: 
+   let inputText = "Neamoth is a good father. His baby name is Khadiza Noor. Wife is Mitu"
+   function displayText(){
+      document.getElementById('displayText').innerHTML = inputText
+   }
+   function search(){
+      let text = document.getElementById("searchValue").value;
+      document.getElementById('displayString1').innerHTML = inputText.search(text);
+   }
+   function match(){
+      let text = document.getElementById("searchValue").value;
+      document.getElementById('displayString2').innerHTML =inputText.match(text);
+   }
+   function searchAll(){
+      let text = document.getElementById("searchValue").value;
+      document.getElementById('displayString3').innerHTML = inputText.matchAll(text);
+   }
+}
+{
+  // search in console.log
+   let inputText = "Neamoth is a good father. His baby name is Khadiza Noor. Wife is Mitu"
+   console.log(inputText)
+   console.log("search: is in " + inputText.search("Neamoth") + " index")
+   console.log("match: " + inputText.match(/is/) + " has been found")
+   console.log("matchAll: " + Array.from(inputText.matchAll(/is/gi)) + " has been found")
+   console.log("startWith: Neamoth is " + inputText.startsWith("Neamoth") + " ")
+   console.log("endsWith: Neamoth is " + inputText.endsWith("Neamoth") + " ")
+}

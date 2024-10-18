@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js Recap</title>
 </head>
+
 <body>
+
+    <div class="containerObject">
+        <h1>
+            Object Constrator:
+        </h1>
+        <div>
+            <button onclick="fullName();">Full Name</button>
+            <p id="name" style="display: inline;"></p>
+        </div>
+        <div>
+            <button onclick="age();">Age</button>
+            <p id="age" style="display: inline-block;"></p>
+        </div>
+        <div>
+            <button onclick="fathersName();">Father</button>
+            <p id="fathersName" style="display: inline-block;"></p>
+        </div>
+        <button onclick="clearAll();" style="margin-top: 15px;">Clear all</button>
+    </div>
+
+    <div class="containerString">
+        <h1>String Methods: </h1>
+        <p id="display"></p>
+        <p id="display2"></p>
+        <p id="display3"></p>
+        <p id="display4"></p>
+        <p id="display5"></p>
+        <p id="display6"></p>
+        <p id="display7"></p>
+        <p id="display8"></p>
+    </div>
+
+    <div class="containerSearchString">
+        <h1>Let's Play with a search</h1>
+        <button onclick="displayText();">View</button>
+        <p id="displayText"></p>
+        <div class="searchGroup">
+            Search: <input type="text" placeholder="Enter Search Value" id="searchValue">
+            <button id="search" onclick="search();">Search</button>
+            <button id="match" onclick="match()">match</button>
+            <button id="matchAll" onclick="matchAll()">matchAll</button>
+            <button id="startWith" onclick="startWith()">startWith</button>
+            <button id="endsWith" onclick="endsWith()">endsWith</button>
+        <p id="displayString1"></p>
+        <p id="displayString2">Need to solve</p>
+        <p id="displayString3">Need to solve</p>
+        </div>
+
+
+    </div>
     <script src="Notes.js"></script>
 </body>
+
 </html>
