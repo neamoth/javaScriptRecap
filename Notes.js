@@ -305,3 +305,74 @@ Object
    console.log("startWith: Neamoth is " + inputText.startsWith("Neamoth") + " ")
    console.log("endsWith: Neamoth is " + inputText.endsWith("Neamoth") + " ")
 }
+{
+   //String Template:
+   function show(){
+      let fn = document.getElementById("fn").value;
+      let ln = document.getElementById("ln").value;
+      let result = `Full name: ${fn} ${ln}`;
+      document.getElementById('nameDisplay').innerHTML = result;
+   }
+   show()
+}
+
+{
+   /**
+    Normal integer number without expotential notation can be 
+    writen upto 15 digit correctly
+
+    Like: 12345678901234
+    */
+   let faultInteger = 99999999999999999 // longer then 15
+   document.getElementById('faultNumber').innerHTML = faultInteger;
+}
+
+{
+   //numbers:
+
+   let number = 9.112; // This is a integer number now
+   console.log(`${number}'s String is ${number.toString()}`); // This is a string number
+}
+
+{
+   //array in javascript
+
+   const personObject = {
+      firstname: 'Neamoth',
+      lastName: 'Ullah',
+      age: 27
+   }
+   const personArray = ['Neamoth', 'Nahid', 'Saima', 'Samira']
+   console.log(`Javascript denotes all array as Object
+      For Example: 
+      personObject = ${typeof(personObject)},
+      personArray = ${typeof(personObject)},
+      - To solve this problem Array can be recognized with "isArray"
+      PersonObject = ${Array.isArray(personObject)} because it's Object,
+      PersonArray = ${Array.isArray(personArray)}, because it's Array
+      - Another way is to use "instanceof"
+      PersonArray = ${personArray instanceof Array}, because it's Array
+      `)
+
+   // To add something in array is,
+   personArray.push('Noor');
+   personArray[personArray.length] = 'Noor er ammu';
+   console.log();
+   console.log(`After pushing through .push function and length
+      array is, ${personArray} &
+      length is, ${personArray.length}
+      
+      Accessing the 1st index of the array: ${personArray[0]}
+      Accessing the Last index of the array: ${personArray[personArray.length - 1]}
+
+      Note: Array with name index is call object
+
+      `);
+      // array using new create problem so its better use []
+      const problemArray = new Array(40);
+      const safeArray = [40];
+      console.log(`
+         safe array is ${safeArray} and
+         problem array is ${problemArray}
+         `)
+}
