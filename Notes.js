@@ -376,3 +376,57 @@ Object
          problem array is ${problemArray}
          `)
 }
+
+{
+   /*Array Methods:
+   Basic Array Methods
+      1.1 Array length
+      1.2 Array toString()
+      1.3 Array at()
+      1.4 Array join()
+      1.5 Array pop()
+      1.6 Array push()
+      1.7 Array unshift()
+      1.8 Array delete()
+      1.9 Array concat()
+      1.10 Array copyWithin()
+      1.11 Array flat()
+      1.12 Array splice()
+      1.13 Array toSpliced()
+      1.14 Array slice()
+   */
+  //Declearation
+  const fruits = ["banana", "Grape", "Pineapple", "Cherry", "Avocado", "Guava", "Coconut", "Muskmelon"];
+  const concat = ["Watermelon", "pear", "Kiwi"]
+document.getElementById('arrayMethods').innerHTML = `The Array = ${fruits}</br>
+1.1 Array Length</br>
+- Length = ${fruits.length}</br></br>
+1.2 Array toString()</br>
+- Before Array Type isArray? = ${Array.isArray(fruits)}</br>
+- After Array type = ${Array.isArray(fruits.toString())}, type is = ${typeof(fruits.toString())}</br></br>
+1.3 Array at()</br>
+- The 3rd element of the array = ${fruits.at(2)}</br></br>
+1.4 Array join() - is use for joining all the elements in the array together</br>
+- Join array with # = ${fruits.join('#')}, type =  ${typeof(fruits.join('#'))}</br></br>
+1.5 Array pop() - It's use for remove the last element of the array <br>
+- Array before using pop function = ${fruits}</br>
+- Array after using pop function remove = ${fruits.pop()}, Now array = ${fruits}</br><br>
+1.6 Array push() - Its use for add any element on last index</br>
+- adding apple in array at ${fruits.push('Apple')} index, array now  - ${fruits}</br><br>
+1.7 Array unshift() - Use for add element in 1st index of array</br>
+- Adding Mango in ${fruits.unshift('Mango')} , Array = ${fruits} </br></br>
+1.8 Array delete()- is now wise to use because it make an hole to the index and insert undefine</br>
+-Use pop or shift instead</br></br>
+1.9 Array concat() - use for join two array</br>
+- concat result = ${fruits.concat(concat)}</br></br>
+1.10 Array copyWithin() - </br>
+- Result = ${fruits.copyWithin(length-1,5)} [Note- here (lenght-1) will be the index position where
+the copy item will <b></b>e place and 5 is the item index which will be copied] </br></br>
+1.11 Array flat()</br>
+</br></br>
+
+</br></br></br></br></br>
+</br>
+`
+}
+
