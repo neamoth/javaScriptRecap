@@ -430,3 +430,80 @@ the copy item will <b></b>e place and 5 is the item index which will be copied] 
 `
 }
 
+{
+   /*
+   Array search
+   Array indexOf()
+   Array lastIndexOf()
+   Array includes()
+   */
+
+   //indexof()
+   const search = ["banana", "Grape", "Pineapple", "Cherry", "banana", "Avocado", "Guava", "Coconut", "Muskmelon"];
+   const position = search.indexOf('banana') + 1;
+   const lastPosition = search.lastIndexOf('banana') + 1;
+   const includes = search.includes('Cherry');
+   console.log(`position of 1st banana found in ${position}`);
+   console.log(`position of last banana found in ${lastPosition}`);
+   console.log(`Cherry is in the array? ${includes}`);
+}
+{
+   /*
+   Array sort:
+
+   Alphabetic Sort
+      Array sort()
+      Array reverse()
+      Array toSorted()
+      Array toReversed()
+
+   Numeric Sort
+      Numeric Sort
+      Random Sort
+      Math.min()
+      Math.max()
+      Home made Min()
+      Home made Max()
+   
+   */
+   console.log(`
+      Array Sort
+      `
+   )
+   const alphabeticSort = ["banana", "Grape", "Pineapple", "Cherry", "banana", "Avocado", "Guava", "Coconut", "Muskmelon"];
+   console.log(`Array is = ${alphabeticSort.toString()}`)
+   
+   const sorted = alphabeticSort.toSorted();
+   console.log(`Result of sortingTo = ${sorted}`) // Its create a new array and make the original unchanged
+
+   const reversed = alphabeticSort.toReversed();
+   console.log(`Result of toReverse = ${reversed}`) // Its create a new array and make the original unchanged
+
+   const sortAsy = alphabeticSort.sort();
+   console.log(`Result of sorting = ${sortAsy}`)
+
+   const reserve = alphabeticSort.reverse();
+   console.log(`Result of reversing = ${reserve}`)
+
+}
+{
+   //Numeric Sort
+   console.log(`
+      Number Sort
+      `)
+   const sorting = [40,5,32,4,3,1,85,20,12,11,30];
+
+   // Sorting order low to high
+   const asySort = sorting.sort((a,b) => a-b);
+   console.log(`Result of asySorting = ${asySort}`);
+
+   const desSort = sorting.sort((a,b) => b-a);
+   console.log(`Result of desSorting = ${desSort}`);
+   /*
+   Important note: 
+   JavaScript sort using TimSort algorithm which is a hybrid approach of
+   marge sort and insertion sort algorithm
+   */
+   
+}
+
