@@ -33,7 +33,7 @@ let x = "Neamoth"
    // It will not be re-declared on global space
 }
 
-console.log(x) 
+console.log(x)
 //ReferenceError - which is scope reference can not be defined
 x = 3;
 console.log(x + " After reassign")
@@ -68,7 +68,7 @@ console.log(c + " Const in global Scope")
 {
    const array = ["Neamoth", "Sakib vai", "Imtiaz vai"]
    console.log(array + " Before change")
-   array.push("Nahid") 
+   array.push("Nahid")
    console.log(array + " After change")
 }
 
@@ -96,21 +96,21 @@ Arithmetic Operators.
    let y = 5
    let z = "0" //here this 0 is a string
 
-   console.log(x +z+y)
-   console.log(typeof(z))//string
+   console.log(x + z + y)
+   console.log(typeof (z))//string
 }
 
 //Assignments Operators
 
 {
    let x = 5, y = 10
-   var z=15
+   var z = 15
    // assignment practice
    console.log("The value of z: " + z)
-   console.log("1. " + (z=(x-y)))
+   console.log("1. " + (z = (x - y)))
    console.log("Now the value of z: " + z)
    console.log("2. " + (x))
-   console.log("3. " + (x+y))
+   console.log("3. " + (x + y))
    console.log("4. " + (x))
 }
 
@@ -129,7 +129,7 @@ Object
 */
 {
    let x = 5 + 6 + " volvo"// Here the int will be get priority
-   let y ="volvo"+ 5 + 6// here the string will be get priority
+   let y = "volvo" + 5 + 6// here the string will be get priority
    console.log(x)
    console.log(y)
 }
@@ -137,11 +137,11 @@ Object
 {
    // javascript is dynamically typed because a single variable can hold multiple date types
    let x = "Neamoth is string" // this is now string
-   console.log(x + " is now a: " + typeof(x))
+   console.log(x + " is now a: " + typeof (x))
    x = 4 // this is now a number
-   console.log(x + " is now a: " + typeof(x))
+   console.log(x + " is now a: " + typeof (x))
    x = true // this is now boolean
-   console.log(x + " is now a: " + typeof(x))
+   console.log(x + " is now a: " + typeof (x))
 }
 
 {
@@ -150,7 +150,7 @@ Object
    let z = 123e-5;   // 0.00123
 }
 
-{  
+{
    //bigInt use for store big integer number is ES 2020
    let x = BigInt(123456789123456789123456789)
    console.log(x)
@@ -165,48 +165,48 @@ Object
       age: 50,
       educationBackground: "CSE",
       jobHistory: null,
-      searchingForJob : true
+      searchingForJob: true
    }
    // Object structure will be synchronized a to z
 
    console.log(person) // print the full object
    console.log(person.educationBackground) // print only the Education Background Property
    console.log(person.firstName + " " + person.lastName) // print <fullName></fullName>
-   console.log("Person is an: "+ typeof(person))
+   console.log("Person is an: " + typeof (person))
 }
 
 {
    /*
       Function
    */
-   function displayInput(){
+   function displayInput() {
       console.log("Option 1: Add ")
       console.log("Option 2: Sub ")
       console.log("Option 3: Mult ")
       console.log("Option 4: Div ")
    }
-      displayInput()
-      //let option = prompt("Enter a number to continue: ")
-      
-      function calculator(option, a, b){
-         let result
-         if(option == 1){
-            result = a+b
-         }
-         if(option == 2){
-            result = a-b
-         }
-         if(option == 3){
-            result = a*b
-         }
-         if(option == 4){
-            result = a/b
-         }
-         console.log(result)
+   displayInput()
+   //let option = prompt("Enter a number to continue: ")
+
+   function calculator(option, a, b) {
+      let result
+      if (option == 1) {
+         result = a + b
       }
-      //let a = parseInt(prompt("Enter a number: "))
-      //let b = parseInt(prompt("Enter b number: "))
-      //calculator(option, a, b);
+      if (option == 2) {
+         result = a - b
+      }
+      if (option == 3) {
+         result = a * b
+      }
+      if (option == 4) {
+         result = a / b
+      }
+      console.log(result)
+   }
+   //let a = parseInt(prompt("Enter a number: "))
+   //let b = parseInt(prompt("Enter b number: "))
+   //calculator(option, a, b);
 }
 
 {
@@ -248,21 +248,21 @@ Object
 {
    // event practices 
    const person = {
-      firstName :"Khadiza",
+      firstName: "Khadiza",
       lastName: "Noor",
       age: "2 Month and 13 Days",
       fathersName: "MD. Neamoth Ullah"
    }
-   function fullName(){
+   function fullName() {
       document.getElementById('name').innerHTML = person.firstName + " " + person.lastName
    }
-   function age(){
-      document.getElementById('age').innerHTML = person.lastName + "'s Age is: "+ person.age;
+   function age() {
+      document.getElementById('age').innerHTML = person.lastName + "'s Age is: " + person.age;
    }
-   function fathersName(){
+   function fathersName() {
       document.getElementById('fathersName').innerHTML = person.fathersName + " is the father of, " + person.lastName
    }
-   function clearAll(){
+   function clearAll() {
       document.getElementById('name').innerHTML = ''
       document.getElementById('age').innerHTML = ''
       document.getElementById('fathersName').innerHTML = ''
@@ -273,30 +273,30 @@ Object
 
    let name = " Neamoth is a Good father          ";
    document.getElementById('display').innerHTML = name
-   document.getElementById('display2').innerHTML ="Repeat: "+ name.repeat(2)
-   document.getElementById('display3').innerHTML ="Replace: "+ name.replace("Neamoth is good boy")
+   document.getElementById('display2').innerHTML = "Repeat: " + name.repeat(2)
+   document.getElementById('display3').innerHTML = "Replace: " + name.replace("Neamoth is good boy")
 }
 {
    //Search With Practices: 
    let inputText = "Neamoth is a good father. His baby name is Khadiza Noor. Wife is Mitu"
-   function displayText(){
+   function displayText() {
       document.getElementById('displayText').innerHTML = inputText
    }
-   function search(){
+   function search() {
       let text = document.getElementById("searchValue").value;
       document.getElementById('displayString1').innerHTML = inputText.search(text);
    }
-   function match(){
+   function match() {
       let text = document.getElementById("searchValue").value;
-      document.getElementById('displayString2').innerHTML =inputText.match(text);
+      document.getElementById('displayString2').innerHTML = inputText.match(text);
    }
-   function searchAll(){
+   function searchAll() {
       let text = document.getElementById("searchValue").value;
       document.getElementById('displayString3').innerHTML = inputText.matchAll(text);
    }
 }
 {
-  // search in console.log
+   // search in console.log
    let inputText = "Neamoth is a good father. His baby name is Khadiza Noor. Wife is Mitu"
    console.log(inputText)
    console.log("search: is in " + inputText.search("Neamoth") + " index")
@@ -307,7 +307,7 @@ Object
 }
 {
    //String Template:
-   function show(){
+   function show() {
       let fn = document.getElementById("fn").value;
       let ln = document.getElementById("ln").value;
       let result = `Full name: ${fn} ${ln}`;
@@ -345,8 +345,8 @@ Object
    const personArray = ['Neamoth', 'Nahid', 'Saima', 'Samira']
    console.log(`Javascript denotes all array as Object
       For Example: 
-      personObject = ${typeof(personObject)},
-      personArray = ${typeof(personObject)},
+      personObject = ${typeof (personObject)},
+      personArray = ${typeof (personObject)},
       - To solve this problem Array can be recognized with "isArray"
       PersonObject = ${Array.isArray(personObject)} because it's Object,
       PersonArray = ${Array.isArray(personArray)}, because it's Array
@@ -368,10 +368,10 @@ Object
       Note: Array with name index is call object
 
       `);
-      // array using new create problem so its better use []
-      const problemArray = new Array(40);
-      const safeArray = [40];
-      console.log(`
+   // array using new create problem so its better use []
+   const problemArray = new Array(40);
+   const safeArray = [40];
+   console.log(`
          safe array is ${safeArray} and
          problem array is ${problemArray}
          `)
@@ -395,19 +395,19 @@ Object
       1.13 Array toSpliced()
       1.14 Array slice()
    */
-  //Declearation
-  const fruits = ["banana", "Grape", "Pineapple", "Cherry", "Avocado", "Guava", "Coconut", "Muskmelon"];
-  const concat = ["Watermelon", "pear", "Kiwi"]
-document.getElementById('arrayMethods').innerHTML = `The Array = ${fruits}</br>
+   //Declearation
+   const fruits = ["banana", "Grape", "Pineapple", "Cherry", "Avocado", "Guava", "Coconut", "Muskmelon"];
+   const concat = ["Watermelon", "pear", "Kiwi"]
+   document.getElementById('arrayMethods').innerHTML = `The Array = ${fruits}</br>
 1.1 Array Length</br>
 - Length = ${fruits.length}</br></br>
 1.2 Array toString()</br>
 - Before Array Type isArray? = ${Array.isArray(fruits)}</br>
-- After Array type = ${Array.isArray(fruits.toString())}, type is = ${typeof(fruits.toString())}</br></br>
+- After Array type = ${Array.isArray(fruits.toString())}, type is = ${typeof (fruits.toString())}</br></br>
 1.3 Array at()</br>
 - The 3rd element of the array = ${fruits.at(2)}</br></br>
 1.4 Array join() - is use for joining all the elements in the array together</br>
-- Join array with # = ${fruits.join('#')}, type =  ${typeof(fruits.join('#'))}</br></br>
+- Join array with # = ${fruits.join('#')}, type =  ${typeof (fruits.join('#'))}</br></br>
 1.5 Array pop() - It's use for remove the last element of the array <br>
 - Array before using pop function = ${fruits}</br>
 - Array after using pop function remove = ${fruits.pop()}, Now array = ${fruits}</br><br>
@@ -420,7 +420,7 @@ document.getElementById('arrayMethods').innerHTML = `The Array = ${fruits}</br>
 1.9 Array concat() - use for join two array</br>
 - concat result = ${fruits.concat(concat)}</br></br>
 1.10 Array copyWithin() - </br>
-- Result = ${fruits.copyWithin(length-1,5)} [Note- here (lenght-1) will be the index position where
+- Result = ${fruits.copyWithin(length - 1, 5)} [Note- here (lenght-1) will be the index position where
 the copy item will <b></b>e place and 5 is the item index which will be copied] </br></br>
 1.11 Array flat()</br>
 </br></br>
@@ -472,7 +472,7 @@ the copy item will <b></b>e place and 5 is the item index which will be copied] 
    )
    const alphabeticSort = ["banana", "Grape", "Pineapple", "Cherry", "banana", "Avocado", "Guava", "Coconut", "Muskmelon"];
    console.log(`Array is = ${alphabeticSort.toString()}`)
-   
+
    const sorted = alphabeticSort.toSorted();
    console.log(`Result of sortingTo = ${sorted}`) // Its create a new array and make the original unchanged
 
@@ -491,19 +491,104 @@ the copy item will <b></b>e place and 5 is the item index which will be copied] 
    console.log(`
       Number Sort
       `)
-   const sorting = [40,5,32,4,3,1,85,20,12,11,30];
+   const sorting = [40, 5, 32, 4, 3, 1, 85, 20, 12, 11, 30];
 
    // Sorting order low to high
-   const asySort = sorting.sort((a,b) => a-b);
+   const asySort = sorting.sort((a, b) => a - b);
    console.log(`Result of asySorting = ${asySort}`);
 
-   const desSort = sorting.sort((a,b) => b-a);
+   const desSort = sorting.sort((a, b) => b - a);
    console.log(`Result of desSorting = ${desSort}`);
    /*
    Important note: 
    JavaScript sort using TimSort algorithm which is a hybrid approach of
    marge sort and insertion sort algorithm
    */
+
+}
+
+{
+   /*
+   forEach, Map, Filter and reduce
+   */
+   const names = ["Neamoth", "Mitu", "Noor"];
+   //use of foreach
+   let text = "";
+   function family(value, index, array) {
+      text += "Member " + (index + 1) + ": " + value + "</br>";
+   }
+   names.forEach(family)
+   document.getElementById('forEach').innerHTML = text + "</br>";
+
+   function mapTxt(value, index, array) {
+      return "Name: " + value;
+   }
+   let mapText = names.map(mapTxt);
+   document.getElementById('mapText').innerHTML = mapText + "</br>";
+
+
+
+}
+
+var names = ["Neamoth", "Mitu"];
+{
+   //Array Const
+   var names = ["Samira", "Mitu"];
+   var outputArray = names[0];
+   document.getElementById('constArrayB').innerHTML = `This is in block scope ${outputArray} <br />`;
+}
+document.getElementById('constArrayG').innerHTML = `This is in global scope ${outputArray} <br />`;
+
+{
+   const date = new Date();
+   const newDate = new Date("2024-11-11");
+   console.log(date);
+   console.log(newDate);
+   /*
+   new Date(year,month,day,hours,minutes,seconds,ms)
+   */
+}
+
+{
+   /*Math in javascript
+   Math.E        // returns Euler's number
+   Math.PI       // returns PI
+   Math.SQRT2    // returns the square root of 2
+   Math.SQRT1_2  // returns the square root of 1/2
+   Math.LN2      // returns the natural logarithm of 2
+   Math.LN10     // returns the natural logarithm of 10
+   Math.LOG2E    // returns base 2 logarithm of E
+   Math.LOG10E   // returns base 10 logarithm of E
+   */
+   console.log(Math.PI);
+   let r = 2;
+   let piRSqure = Math.PI * (r * r);
+   let useingPow = Math.PI * (Math.pow(r, 2));
+   console.log(piRSqure);
+   console.log(useingPow);
+   console.log(Math.ceil(4.9)); // round up
+   console.log(Math.floor(4.9)); // round down
+   console.log(Math.trunc(-4.9)); // round
+   console.log(Math.max(0, 150, 30, 20, -8, -200)); // return max
+   console.log(Math.min(0, 150, 30, 20, -8, -200)); // return min
+   console.log(Math.floor(Math.random() * 10));// random value upto o-9
+   console.log(Math.floor(Math.random() * 10) + 1);// random value upto 1-10
+}
+{
+   //math random capture practice
+
+   let a = Math.floor(Math.random() * 11);
+   document.getElementById('number1').innerHTML = a;
+   let b = Math.floor(Math.random() * 11);
+   document.getElementById('number2').innerHTML = b;
+   let result = a + b;
    
+   function resCap() {
+      let resultInput = parseInt(document.getElementById('inputAddition').value);
+      if(result === resultInput) {
+         document.getElementById('resultCapture').innerHTML = `Your answer ${resultInput} is correct!`;
+      }
+   }
+   resCap();
 }
 
