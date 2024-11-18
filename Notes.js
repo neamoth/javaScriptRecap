@@ -592,3 +592,38 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    resCap();
 }
 
+{
+   //Conditional Statement in javascript
+
+   let number = 20;
+   if (number === 15){
+      console.log(`Number is 15`);
+   }else if (number > 15){
+      console.log(`Number Greater Then 15`);
+
+   }else{
+         console.log(`Number less then 15`);
+         
+   }
+}
+{
+   //Switch
+   let day = 0;
+   switch (day){
+      case 0:
+         text = `Saturday`;
+         break;
+      case 1:
+         text = `Sunday`;
+         break;
+      case 3:
+         text = `Monday`;
+         break;
+      default:
+         text = `No Days`;
+         break;  
+   }
+   console.log(text); // return Saturday
+   
+}
+
