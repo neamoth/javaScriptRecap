@@ -627,3 +627,35 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    
 }
 
+{
+   //Loop
+   //For loop
+
+   let i = 1; // If start with 0, then there will be 6 numbers
+   for (let i = 1/* if we don't use let then i will be 6 in end*/; i <=5; i++){
+      console.log(`Number is Now, ${i}`);
+   }
+   console.log(i); // using loop scope
+
+   //For In Loop for object
+   const cars = {1:"Toyota",2: "Lamborgini",3: "Audi"};
+   for(let names in cars){
+      console.log(`Car ${names}: ${cars[names]}`);
+   }
+   // For In Loop for Iterable object works in string too
+   let name = "Mitu";
+   for(let words in name ){
+      console.log(name[words]);
+      
+   }
+
+   // Do While loop
+
+   /*
+   we can run a do white loop with do in condition or some code and while
+   to stop the code.
+   Like a libarary management system options
+   */
+   
+}
+
