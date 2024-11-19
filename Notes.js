@@ -706,3 +706,32 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
 
    //ES2024 GroupBy Mathods
 }
+
+{
+   // Distructuring
+
+   const employee = {
+      firstName : "Neamoth",
+      lastName : "Ullah",
+      position : "Software Engineer"
+   }
+
+   let {firstName, lastName, salary = 50000} = employee;
+   console.log(firstName+ " " + lastName + `& Salary: ${salary}`);
+   //we can swipping
+   let fn = "Neamoth";
+   let ln = "Ullah";
+   [fn, ln] = [ln,fn];
+   console.log(fn+ " " + ln);
+
+   //String with rest
+   let names  = "Neamoth"
+   let[a1,b1, ...rest] = names
+   console.log(a1);
+   console.log(b1);
+   console.log(`rest are ${rest}`);
+
+   
+     
+   
+}
