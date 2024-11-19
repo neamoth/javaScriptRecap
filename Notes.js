@@ -665,7 +665,7 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    l.add("test"); // for adding in set
    l.delete("f") // for deleting in set
    console.log(`Test in the Loop : ${l.has("test")}`);
-   console.log(`Size of the set: ${l.size}`); /
+   console.log(`Size of the set: ${l.size}`); 
    // l.clear(); use for clear the set
   
    /*
@@ -679,4 +679,30 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
       i++; // In loop scope the value will not increase
    }
 }
+{
+   // map
+   // Two way to call a map
+   const map1 = new Map([
+      ["BreakFast" , 200],
+      ["Launch" , 300],
+      ["Dinner" , 400],
+   ]);
+   const map2 = new Map ();
+   map2.set("Neamoth", 500);
+   map2.set("Mitu", 300);
+   // To add something in Map
+   map1.set("Snacks", 500);
+   console.log("Snacks Price: " + map1.get("Snacks")); 
+   console.log("Size is, " + map1.size);
+   map1.delete("Snacks");
+   console.log("After delete size is, " + map1.size);
 
+   map1.forEach(function(key, value){console.log(`Price of ${value}: ${key}tk`)});
+
+   //entries
+   for(let e of map2.entries()) {
+      console.log(e);
+   }
+
+   //ES2024 GroupBy Mathods
+}
