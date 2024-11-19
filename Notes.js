@@ -659,3 +659,24 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    
 }
 
+{
+   //set
+   const l = new Set(["a", "b", "c", "d", "e", "f"]);
+   l.add("test"); // for adding in set
+   l.delete("f") // for deleting in set
+   console.log(`Test in the Loop : ${l.has("test")}`);
+   console.log(`Size of the set: ${l.size}`); /
+   // l.clear(); use for clear the set
+  
+   /*
+   Set can we also assign as:
+   const s = new Set();
+   */
+
+   let i = 1; // It has to be declear global scope
+   for(let w of l){ 
+      console.log(`Letter ${i} is ${w}`);
+      i++; // In loop scope the value will not increase
+   }
+}
+
