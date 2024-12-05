@@ -878,3 +878,11 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    // Basically this. is refer to an object
    //it also use for call and bind
 }
+
+{
+   //Arrow function:
+
+   let addition = (a,b) => console.log("result "+ (a+b));
+   addition(10, 20); // output: 30
+   
+}
