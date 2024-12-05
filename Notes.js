@@ -735,3 +735,32 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
      
    
 }
+
+{
+   // Regulular Expression
+
+   /*
+   Notes:
+   Regular expression is use for searching
+   There is only two function to work. search(), and replace()
+   */
+
+   // Normal Search:
+   let text = "Lets find Neamoth Ullah";
+   let result = text.search("Neamoth");
+   let errorResult = text.search("neamoth");
+   console.log("Index number is " + result); // result is 10
+   console.log("Index number is " + errorResult); // result is -1 for not found.
+   // Now Find with regular expression:
+   result = text.search(/neamoth/i);
+   console.log("Index number is " + result); // 10 for successful search, i for case insensitive
+
+   // Same for replace with regular expression:
+   let replaceText = text.replace(/neamoth ullah/i , "Khadiza Noor");
+   console.log(replaceText); // Result is "Lets find Khadiza Noor"
+
+   //test()
+   console.log(/N/.test(text)); // returns true
+   //exec()
+   console.log(/e/.exec(text)); // returns  
+}
