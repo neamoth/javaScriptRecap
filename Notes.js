@@ -764,3 +764,36 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    //exec()
    console.log(/e/.exec(text)); // returns  
 }
+
+{
+   /*
+      Error handling types:
+         try - to test a block of code
+         catch - handle the error
+         finally - after try and catch it will execute 
+                  of the result
+         throw - custom error
+
+      Error throw in two Parts
+      Name: Message
+   ex.SyntexError: value in undefine.      
+   */
+
+   let json = '{"salary": 50000}';
+   try{
+      const user = JSON.parse(json);
+      
+      if (!user.name){
+         throw new SyntaxError("NameError: Name data is not found!");         
+      }
+      console.log(user.name);
+      
+   } catch(e){
+      console.log("Error in JSON: " + e.message);
+      
+   }
+   finally{
+      const user = JSON.parse(json);
+      console.log("In finally the salary is " + user.salary);
+   }
+}
