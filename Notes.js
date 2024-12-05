@@ -861,3 +861,20 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    
    
 }
+
+{
+   //this keyword:
+
+   const employee = {
+      firstName: "Neamoth",
+      lastName: "Ullah",
+      salary: 50000,
+      department: "Software Engineer",
+      getFullName: function(){
+         return this.firstName + " " + this.lastName;
+      }
+   }
+   console.log(employee.getFullName());
+   // Basically this. is refer to an object
+   //it also use for call and bind
+}
