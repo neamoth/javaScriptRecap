@@ -797,3 +797,67 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
       console.log("In finally the salary is " + user.salary);
    }
 }
+
+{
+   //Hoisting of javascript:
+
+   /*
+      In hoisting javascript do like, If we create a variable. it
+      allocate the variable in global memory scope.
+      because of this reason we can access the variable
+      before declare it.
+
+      and for function, JavaScript put the whole code in global
+      and console log the whole function. same as varible.
+   */
+   console.log("Before declearing: ");
+   console.log("Number will be: "+number); //undefined
+   console.log(neamoth); //Print the whole function
+   neamoth(); // Log the "My name is Neamoth"
+   console.log("Arrow Function will be: "+arrowFunction); // Undefined
+   try {
+      arrowFunction();
+   } catch (error) {
+      console.log(`The function throw the error: ${error}`);
+      
+   }
+   
+   var number = 10;
+   function neamoth(){
+      console.log("My name is Neamoth.");
+      
+   }
+   var arrowFunction = () => {console.log("Arrow Function Neamoth");
+   }
+   console.log("After declearing: ");
+   
+   console.log(number); // print 10
+   arrowFunction(); // No arrow and print "Arrow Functon Neamoth"
+
+   hoisingNumber = 200; //assign number
+   console.log("Hoising Number: "+hoisingNumber); // Print the number 200
+   //var hoisingNumber; // after that declearing it and javascript move it into top
+
+   //For let and const
+
+   //try hoising - Will throw an error. This is call **Temporal Dead Zone**
+
+   try {
+      console.log("For let: "+letX);
+   } catch (error) {
+      console.log("Let error: "+ error);
+      
+   }
+   try {
+      
+      console.log("For const: "+constX);
+   } catch (error) {
+      console.log("const error: "+ error);
+   }
+   
+   let letX = 100;
+   const constX = 12;
+   
+   
+   
+}
