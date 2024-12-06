@@ -886,3 +886,50 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    addition(10, 20); // output: 30
    
 }
+
+{
+   // Class - It's a ES6 Feature in JavaScript
+
+   console.log(`
+      
+Class in JavaScript`);
+   
+   class Cloth{
+      constructor(name, brand, price){
+         this.name = name;
+         this.brand = brand;
+         this.price = price;
+      }
+      
+      calculateTotalPrice(){
+         const salesTex = 0.1;
+         const deliveryCharge = 25;
+         return (this.price + (this.price * salesTex) + deliveryCharge);
+      }
+      displayCloth(){
+         console.log(`Product: ${this.name}`);
+         console.log(`Brand: ${this.brand}`);
+         console.log(`Price: $${this.price}`);
+      }
+   }
+   
+   
+   const product1 = new Cloth("Tshirt", "Gucci",50);
+   const product2 = new Cloth("Court", "Armani", 3500);
+   const product3 = new Cloth("Pants", "Gucci",100);
+   
+   //const input = parseInt(prompt("Enter a Number: "))
+   const input = 3;
+   if (input===1){
+      product1.displayCloth();
+      console.log(`Total: $${product1.calculateTotalPrice()} (including salesTex $ Delivery Charges)`);
+   }else if (input===2){
+      product2.displayCloth();
+      console.log(`Total: $${product2.calculateTotalPrice()} (including salesTex $ Delivery Charges)`);
+   }else if (input===3){
+      product3.displayCloth();
+      console.log(`Total: $${product3.calculateTotalPrice()} (including salesTex $ Delivery Charges)`);
+   }else{
+      console.log("Invalid choice");
+   }
+}
