@@ -933,3 +933,81 @@ Class in JavaScript`);
       console.log("Invalid choice");
    }
 }
+
+//In Depth of  Objects
+
+{
+   /*
+   Object is basically a Box where properties and methods are gathered
+   There are two types of object in JavaScript:
+      Object Literal: 
+      Singleton Object:
+   */ 
+      //Declearing a symbol for use it on object
+      const sym = Symbol("laughing");
+      //Object with properties and method also using array
+      const userDetails = {
+         name: "Neamoth",
+         'Full Name': "Md. Neamoth Ullah",
+         age: 25,
+         isMarried: true,
+         currentStatus: () => console.log("Coding in vsCode"),
+         hobbies: ["Playing Video Game","Watching English Series", "Riding Bikes"],
+         [sym]: "I am a laughing man",
+         //Symbol can't be used as key in object
+      }
+
+      //Nested Object
+      const userInfo = {
+         userName: "neamoth",
+         fullName: {
+            firstName: "Neamoth",
+            lastName: "Ullah"
+         },
+         password: "123abc"
+      }
+
+      //Accessing object Properties
+      console.log(userDetails.name); //Print Neamoth
+      // console.log(userDetails.Full Name); //Throws Syntex Error
+      console.log(userDetails["Full Name"]); //Can no be access with dots
+      console.log(`2nd Hobby of ${userDetails.name} is, ${userDetails.hobbies[1]}`); //Print Watching English Series  ofcouse
+
+      //symbol and the type
+      console.log(userDetails); //type
+      console.log(`The symbol output: ${userDetails[sym]}`);
+
+      //Accessing Nested Object
+      console.log(`User ${userInfo.userName}'s Full Name: ${userInfo.fullName.firstName} ${userInfo.fullName.lastName}`);
+
+      //SingleTon:
+      const userStatus = new Object();
+      userStatus.onlineStatus = false;
+      
+      //Marging Objects
+
+      //Method 1:
+      // const user = Object.assign({}, userInfo, userDetails, userStatus);
+
+      // //lets check now
+      // console.log(`User Name: ${user.userName} and Online Status: ${user.onlineStatus}`);
+
+      //Method 2:
+      const user = {...userInfo, ...userDetails, ...userStatus}// most usecase method
+      
+      
+      //Checking with ifElse
+
+      if(user.onlineStatus === false){
+         if(user.userName === ('neamoth') &&((/ullah/i).test(user.fullName.lastName)) && (user.password === "123abc")){
+            console.log("Login Successful");   
+         }else{
+            console.log("Login Failed");
+            
+         }
+      }else{
+         console.log("Already logged in");
+      }
+      let test="NeamOth";
+      console.log(test === (/neamoth/i)); //string and a regular expression can never be equal
+}
