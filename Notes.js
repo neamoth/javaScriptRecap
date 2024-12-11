@@ -582,10 +582,10 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    let b = Math.floor(Math.random() * 11);
    document.getElementById('number2').innerHTML = b;
    let result = a + b;
-   
+
    function resCap() {
       let resultInput = parseInt(document.getElementById('inputAddition').value);
-      if(result === resultInput) {
+      if (result === resultInput) {
          document.getElementById('resultCapture').innerHTML = `Your answer ${resultInput} is correct!`;
       }
    }
@@ -596,20 +596,20 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    //Conditional Statement in javascript
 
    let number = 20;
-   if (number === 15){
+   if (number === 15) {
       console.log(`Number is 15`);
-   }else if (number > 15){
+   } else if (number > 15) {
       console.log(`Number Greater Then 15`);
 
-   }else{
-         console.log(`Number less then 15`);
-         
+   } else {
+      console.log(`Number less then 15`);
+
    }
 }
 {
    //Switch
    let day = 0;
-   switch (day){
+   switch (day) {
       case 0:
          text = `Saturday`;
          break;
@@ -621,10 +621,10 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
          break;
       default:
          text = `No Days`;
-         break;  
+         break;
    }
    console.log(text); // return Saturday
-   
+
 }
 
 {
@@ -632,21 +632,21 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    //For loop
 
    let i = 1; // If start with 0, then there will be 6 numbers
-   for (let i = 1/* if we don't use let then i will be 6 in end*/; i <=5; i++){
+   for (let i = 1/* if we don't use let then i will be 6 in end*/; i <= 5; i++) {
       console.log(`Number is Now, ${i}`);
    }
    console.log(i); // using loop scope
 
    //For In Loop for object
-   const cars = {1:"Toyota",2: "Lamborgini",3: "Audi"};
-   for(let names in cars){
+   const cars = { 1: "Toyota", 2: "Lamborgini", 3: "Audi" };
+   for (let names in cars) {
       console.log(`Car ${names}: ${cars[names]}`);
    }
    // For In Loop for Iterable object works in string too
    let name = "Mitu";
-   for(let words in name ){
+   for (let words in name) {
       console.log(name[words]);
-      
+
    }
 
    // Do While loop
@@ -656,7 +656,7 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    to stop the code.
    Like a libarary management system options
    */
-   
+
 }
 
 {
@@ -665,16 +665,16 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    l.add("test"); // for adding in set
    l.delete("f") // for deleting in set
    console.log(`Test in the Loop : ${l.has("test")}`);
-   console.log(`Size of the set: ${l.size}`); 
+   console.log(`Size of the set: ${l.size}`);
    // l.clear(); use for clear the set
-  
+
    /*
    Set can we also assign as:
    const s = new Set();
    */
 
    let i = 1; // It has to be declear global scope
-   for(let w of l){ 
+   for (let w of l) {
       console.log(`Letter ${i} is ${w}`);
       i++; // In loop scope the value will not increase
    }
@@ -683,24 +683,24 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    // map
    // Two way to call a map
    const map1 = new Map([
-      ["BreakFast" , 200],
-      ["Launch" , 300],
-      ["Dinner" , 400],
+      ["BreakFast", 200],
+      ["Launch", 300],
+      ["Dinner", 400],
    ]);
-   const map2 = new Map ();
+   const map2 = new Map();
    map2.set("Neamoth", 500);
    map2.set("Mitu", 300);
    // To add something in Map
    map1.set("Snacks", 500);
-   console.log("Snacks Price: " + map1.get("Snacks")); 
+   console.log("Snacks Price: " + map1.get("Snacks"));
    console.log("Size is, " + map1.size);
    map1.delete("Snacks");
    console.log("After delete size is, " + map1.size);
 
-   map1.forEach(function(key, value){console.log(`Price of ${value}: ${key}tk`)});
+   map1.forEach(function (key, value) { console.log(`Price of ${value}: ${key}tk`) });
 
    //entries
-   for(let e of map2.entries()) {
+   for (let e of map2.entries()) {
       console.log(e);
    }
 
@@ -711,29 +711,29 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    // Distructuring
 
    const employee = {
-      firstName : "Neamoth",
-      lastName : "Ullah",
-      position : "Software Engineer"
+      firstName: "Neamoth",
+      lastName: "Ullah",
+      position: "Software Engineer"
    }
 
-   let {firstName, lastName, salary = 50000} = employee;
-   console.log(firstName+ " " + lastName + `& Salary: ${salary}`);
+   let { firstName, lastName, salary = 50000 } = employee;
+   console.log(firstName + " " + lastName + `& Salary: ${salary}`);
    //we can swipping
    let fn = "Neamoth";
    let ln = "Ullah";
-   [fn, ln] = [ln,fn];
-   console.log(fn+ " " + ln);
+   [fn, ln] = [ln, fn];
+   console.log(fn + " " + ln);
 
    //String with rest
-   let names  = "Neamoth"
-   let[a1,b1, ...rest] = names
+   let names = "Neamoth"
+   let [a1, b1, ...rest] = names
    console.log(a1);
    console.log(b1);
    console.log(`rest are ${rest}`);
 
-   
-     
-   
+
+
+
 }
 
 {
@@ -756,7 +756,7 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    console.log("Index number is " + result); // 10 for successful search, i for case insensitive
 
    // Same for replace with regular expression:
-   let replaceText = text.replace(/neamoth ullah/i , "Khadiza Noor");
+   let replaceText = text.replace(/neamoth ullah/i, "Khadiza Noor");
    console.log(replaceText); // Result is "Lets find Khadiza Noor"
 
    //test()
@@ -780,19 +780,19 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    */
 
    let json = '{"salary": 50000}';
-   try{
+   try {
       const user = JSON.parse(json);
-      
-      if (!user.name){
-         throw new SyntaxError("NameError: Name data is not found!");         
+
+      if (!user.name) {
+         throw new SyntaxError("NameError: Name data is not found!");
       }
       console.log(user.name);
-      
-   } catch(e){
+
+   } catch (e) {
       console.log("Error in JSON: " + e.message);
-      
+
    }
-   finally{
+   finally {
       const user = JSON.parse(json);
       console.log("In finally the salary is " + user.salary);
    }
@@ -811,31 +811,32 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
       and console log the whole function. same as varible.
    */
    console.log("Before declearing: ");
-   console.log("Number will be: "+number); //undefined
+   console.log("Number will be: " + number); //undefined
    console.log(neamoth); //Print the whole function
    neamoth(); // Log the "My name is Neamoth"
-   console.log("Arrow Function will be: "+arrowFunction); // Undefined
+   console.log("Arrow Function will be: " + arrowFunction); // Undefined
    try {
       arrowFunction();
    } catch (error) {
       console.log(`The function throw the error: ${error}`);
-      
+
    }
-   
+
    var number = 10;
-   function neamoth(){
+   function neamoth() {
       console.log("My name is Neamoth.");
-      
+
    }
-   var arrowFunction = () => {console.log("Arrow Function Neamoth");
+   var arrowFunction = () => {
+      console.log("Arrow Function Neamoth");
    }
    console.log("After declearing: ");
-   
+
    console.log(number); // print 10
    arrowFunction(); // No arrow and print "Arrow Functon Neamoth"
 
    hoisingNumber = 200; //assign number
-   console.log("Hoising Number: "+hoisingNumber); // Print the number 200
+   console.log("Hoising Number: " + hoisingNumber); // Print the number 200
    //var hoisingNumber; // after that declearing it and javascript move it into top
 
    //For let and const
@@ -843,23 +844,23 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    //try hoising - Will throw an error. This is call **Temporal Dead Zone**
 
    try {
-      console.log("For let: "+letX);
+      console.log("For let: " + letX);
    } catch (error) {
-      console.log("Let error: "+ error);
-      
+      console.log("Let error: " + error);
+
    }
    try {
-      
-      console.log("For const: "+constX);
+
+      console.log("For const: " + constX);
    } catch (error) {
-      console.log("const error: "+ error);
+      console.log("const error: " + error);
    }
-   
+
    let letX = 100;
    const constX = 12;
-   
-   
-   
+
+
+
 }
 
 {
@@ -870,7 +871,7 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
       lastName: "Ullah",
       salary: 50000,
       department: "Software Engineer",
-      getFullName: function(){
+      getFullName: function () {
          return this.firstName + " " + this.lastName;
       }
    }
@@ -882,9 +883,9 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
 {
    //Arrow function:
 
-   let addition = (a,b) => console.log("result "+ (a+b));
+   let addition = (a, b) => console.log("result " + (a + b));
    addition(10, 20); // output: 30
-   
+
 }
 
 {
@@ -893,43 +894,43 @@ document.getElementById('constArrayG').innerHTML = `This is in global scope ${ou
    console.log(`
       
 Class in JavaScript`);
-   
-   class Cloth{
-      constructor(name, brand, price){
+
+   class Cloth {
+      constructor(name, brand, price) {
          this.name = name;
          this.brand = brand;
          this.price = price;
       }
-      
-      calculateTotalPrice(){
+
+      calculateTotalPrice() {
          const salesTex = 0.1;
          const deliveryCharge = 25;
          return (this.price + (this.price * salesTex) + deliveryCharge);
       }
-      displayCloth(){
+      displayCloth() {
          console.log(`Product: ${this.name}`);
          console.log(`Brand: ${this.brand}`);
          console.log(`Price: $${this.price}`);
       }
    }
-   
-   
-   const product1 = new Cloth("Tshirt", "Gucci",50);
+
+
+   const product1 = new Cloth("Tshirt", "Gucci", 50);
    const product2 = new Cloth("Court", "Armani", 3500);
-   const product3 = new Cloth("Pants", "Gucci",100);
-   
+   const product3 = new Cloth("Pants", "Gucci", 100);
+
    //const input = parseInt(prompt("Enter a Number: "))
    const input = 3;
-   if (input===1){
+   if (input === 1) {
       product1.displayCloth();
       console.log(`Total: $${product1.calculateTotalPrice()} (including salesTex $ Delivery Charges)`);
-   }else if (input===2){
+   } else if (input === 2) {
       product2.displayCloth();
       console.log(`Total: $${product2.calculateTotalPrice()} (including salesTex $ Delivery Charges)`);
-   }else if (input===3){
+   } else if (input === 3) {
       product3.displayCloth();
       console.log(`Total: $${product3.calculateTotalPrice()} (including salesTex $ Delivery Charges)`);
-   }else{
+   } else {
       console.log("Invalid choice");
    }
 }
@@ -942,72 +943,143 @@ Class in JavaScript`);
    There are two types of object in JavaScript:
       Object Literal: 
       Singleton Object:
-   */ 
-      //Declearing a symbol for use it on object
-      const sym = Symbol("laughing");
-      //Object with properties and method also using array
-      const userDetails = {
-         name: "Neamoth",
-         'Full Name': "Md. Neamoth Ullah",
-         age: 25,
-         isMarried: true,
-         currentStatus: () => console.log("Coding in vsCode"),
-         hobbies: ["Playing Video Game","Watching English Series", "Riding Bikes"],
-         [sym]: "I am a laughing man",
-         //Symbol can't be used as key in object
+   */
+   //Declearing a symbol for use it on object
+   const sym = Symbol("laughing");
+   //Object with properties and method also using array
+   const userDetails = {
+      name: "Neamoth",
+      'Full Name': "Md. Neamoth Ullah",
+      age: 25,
+      isMarried: true,
+      currentStatus: () => console.log("Coding in vsCode"),
+      hobbies: ["Playing Video Game", "Watching English Series", "Riding Bikes"],
+      [sym]: "I am a laughing man",
+      //Symbol can't be used as key in object
+   }
+
+   //Nested Object
+   const userInfo = {
+      userName: "neamoth",
+      fullName: {
+         firstName: "Neamoth",
+         lastName: "Ullah"
+      },
+      password: "123abc"
+   }
+
+   //Accessing object Properties
+   console.log(userDetails.name); //Print Neamoth
+   // console.log(userDetails.Full Name); //Throws Syntex Error
+   console.log(userDetails["Full Name"]); //Can no be access with dots
+   console.log(`2nd Hobby of ${userDetails.name} is, ${userDetails.hobbies[1]}`); //Print Watching English Series  ofcouse
+
+   //symbol and the type
+   console.log(userDetails); //type
+   console.log(`The symbol output: ${userDetails[sym]}`);
+
+   //Accessing Nested Object
+   console.log(`User ${userInfo.userName}'s Full Name: ${userInfo.fullName.firstName} ${userInfo.fullName.lastName}`);
+
+   //SingleTon:
+   const userStatus = new Object();
+   userStatus.onlineStatus = false;
+
+   //Marging Objects
+
+   //Method 1:
+   // const user = Object.assign({}, userInfo, userDetails, userStatus);
+
+   // //lets check now
+   // console.log(`User Name: ${user.userName} and Online Status: ${user.onlineStatus}`);
+
+   //Method 2:
+   const user = { ...userInfo, ...userDetails, ...userStatus }// most usecase method
+
+
+   //Checking with ifElse
+
+   if (user.onlineStatus === false) {
+      if (user.userName === ('neamoth') && ((/ullah/i).test(user.fullName.lastName)) && (user.password === "123abc")) {
+         console.log("Login Successful");
+      } else {
+         console.log("Login Failed");
+
       }
+   } else {
+      console.log("Already logged in");
+   }
+   let test = "NeamOth";
+   console.log(test === (/neamoth/i)); //string and a regular expression can never be equal
+}
 
-      //Nested Object
-      const userInfo = {
-         userName: "neamoth",
-         fullName: {
-            firstName: "Neamoth",
-            lastName: "Ullah"
-         },
-         password: "123abc"
+// Advance Object Part 2:
+{
+   //ES6
+   // Variable can be assigned to object directly
+
+   const firstName = "Neamoth"
+   const lastName = "Ullah";
+   const age = 27;
+   const isWorking = true;
+
+   const user1 = {
+      firstName,
+      lastName,
+      age,
+      isWorking,
+      //ES6 allow funtions use like this:
+      displayDetails() {
+         console.log(`Name: ${this.firstName} ${this.lastName}`);
+         console.log(`Age: ${this.age}`);
+         console.log(`Is Working: ${this.isWorking}`);
       }
+   }
 
-      //Accessing object Properties
-      console.log(userDetails.name); //Print Neamoth
-      // console.log(userDetails.Full Name); //Throws Syntex Error
-      console.log(userDetails["Full Name"]); //Can no be access with dots
-      console.log(`2nd Hobby of ${userDetails.name} is, ${userDetails.hobbies[1]}`); //Print Watching English Series  ofcouse
+   user1.displayDetails();
 
-      //symbol and the type
-      console.log(userDetails); //type
-      console.log(`The symbol output: ${userDetails[sym]}`);
+   //Using function constructor:
 
-      //Accessing Nested Object
-      console.log(`User ${userInfo.userName}'s Full Name: ${userInfo.fullName.firstName} ${userInfo.fullName.lastName}`);
+   function user2(firstName, lastName, age) {
+      const fullname = firstName + " " + lastName;
+      return { fullname, age };
+   } //its a function for sure
 
-      //SingleTon:
-      const userStatus = new Object();
-      userStatus.onlineStatus = false;
-      
-      //Marging Objects
+   //But after initialization, its became an objcet
+   let user2user1 = user2(firstName, lastName, age);
+   console.log(`Name data: ${user2user1.fullname}`);
+   console.log(`Age data: ${user2user1.age}`);
+   console.log(`Datatype: ${typeof user2user1}`); //type will be object
 
-      //Method 1:
-      // const user = Object.assign({}, userInfo, userDetails, userStatus);
+   //To create multiple user we construct a function and then create object:
 
-      // //lets check now
-      // console.log(`User Name: ${user.userName} and Online Status: ${user.onlineStatus}`);
+   function Users(fName, lName, isLoggedIn) {
+      this.firstName = fName;
+      this.lastName = lName;
+      this.isLoggedIn = isLoggedIn;
+   }
 
-      //Method 2:
-      const user = {...userInfo, ...userDetails, ...userStatus}// most usecase method
-      
-      
-      //Checking with ifElse
+   //adding method as prototype.
+   Users.prototype.displayDetails = function () {
+      console.log(`Name: ${this.firstName} ${this.lastName}`);
+      (this.isLoggedIn) ? console.log(`Online Status: Yes`) : console.log(`Online Status: No`);
+      // instead of using multiline ifelse use above code
 
-      if(user.onlineStatus === false){
-         if(user.userName === ('neamoth') &&((/ullah/i).test(user.fullName.lastName)) && (user.password === "123abc")){
-            console.log("Login Successful");   
-         }else{
-            console.log("Login Failed");
-            
-         }
-      }else{
-         console.log("Already logged in");
-      }
-      let test="NeamOth";
-      console.log(test === (/neamoth/i)); //string and a regular expression can never be equal
+      // if(this.isLoggedIn === true){
+      //    console.log(`Online Status: Yes`);
+      // }else{
+      //    console.log(`Online Status: No`);
+      // }
+   }
+
+   const user3 = new Users("Neamoth", "Ullah", true);
+   const user4 = new Users("Mitu", "Akter", false);
+   const user5 = new Users("Khadiza", "Noor", false);
+
+   console.log(`Displaying all users:
+      `);
+
+   user3.displayDetails();
+   user4.displayDetails();
+   user5.displayDetails();
 }
