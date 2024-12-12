@@ -1268,3 +1268,33 @@ Class in JavaScript`);
    
    // So its basically locked by every protection methods 
 }
+
+{
+   // Functions in Javascripts
+   //Simple declearations:
+
+   function SimpleName(name){
+      return console.log(name);  
+   }
+   SimpleName("Neamoth Ullah");
+
+   // Self invoking function
+   (function SelfGreet(){
+      return console.log("Hello, Welcome to my github");
+   })(); //invoke automatically
+
+   //Hoisting function:
+   //call the function:
+   hoistingAnimal("Cow");
+   //create the function:
+   function hoistingAnimal(animal){
+      return console.log("Animal: ", animal);
+   }
+
+   // arrow function: ES6
+   const arrowFunction = (a,b=10) => { // Default Parameter Values :ES6
+      return console.log(`Sum is, ${a+b}`);
+   }
+   arrowFunction(5);
+   
+}
