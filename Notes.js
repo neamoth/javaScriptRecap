@@ -1227,6 +1227,44 @@ Class in JavaScript`);
 
    const noor = new Names("Noor@gmail.com" , "NoorIsGoodGirl123");
    console.log(noor.password);
+
+   // Protection in object
+   console.log("Protection in object");
    
+   // non Extensible - Can be done by, preventExtension(), seal(), freeze()
+   const protectObject = {
+      name: "Neamoth",
+      age: 27,
+      country: "Bangladesh"
+   }
    
+   Object.preventExtensions(protectObject);
+   try{
+      protectObject.age = 28;
+      console.log(protectObject.age); // 27
+   }catch(e){
+      console.log(e);
+   }
+   
+   // Sealed - Can't add or remove property, can't change property, can't delete property
+   const sealedObject = {
+      name: "Neamoth",
+      age: 27,
+      country: "Bangladesh"
+   }
+   
+   Object.seal(sealedObject);
+   // we already know about the frozen property
+
+   // to check we can use isSeal, isExtensible, isFrozen
+   
+   //Why we can not change Math.PI?
+   const desPI = Object.getOwnPropertyDescriptor(Math, "PI");
+   console.log(desPI); // locked with writable: false, enumerable: false, configurable: false
+   const isPiSeal = Object.isSealed(Math.PI);
+   console.log(isPiSeal); // Yes its Sealed
+   const isFrozenPi = Object.isFrozen(Math.PI);
+   console.log(isFrozenPi); // Yes its Frozen
+   
+   // So its basically locked by every protection methods 
 }
