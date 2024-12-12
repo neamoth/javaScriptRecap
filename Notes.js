@@ -1083,3 +1083,150 @@ Class in JavaScript`);
    user4.displayDetails();
    user5.displayDetails();
 }
+
+{
+
+   // More on object: 
+
+   const nullObject = Object.create(null);
+   //console.log(nullObject); //doesn't inherit anything from object prototype
+   const sampleObject = {};
+   //console.log(sampleObject);
+
+   // Object Prototype:
+
+   //Sometimes we need to add properties or methods in object
+
+   function FamilyMember(name, age, roll, number) {
+      this.name = name;
+      this.age = age;
+      this.roll = roll;
+      this.number = number;
+   }
+
+   const father = new FamilyMember("Abdus Salam", 58, "Ruti Maker", 1777);
+   //console.log(typeof father); //Sure its an object
+
+   // Now lets add country in it
+   FamilyMember.prototype.country = "Bangladesh"; // It will be same for everyone
+
+   //Now add a method:
+   FamilyMember.prototype.hobbies = function (hobby) {
+      this.hobby = hobby;
+      return hobby;
+   }
+   const mother = new FamilyMember("Nasrin Akter", 45, "House Wife", 1778);
+   mother.hobbies("Cha");
+   console.log(mother);
+   //console.log(typeof mother.hobbies); its a method.
+
+   //Object Methods:
+
+
+   //Object assign already we know. its copy and marge two or more object
+
+   //entries:
+   console.log(Object.entries(father)); //Create 4 array with new array index
+
+   //Groupby
+
+   const fruits = [
+      { name: "apples", quantity: 350 },
+      { name: "bananas", quantity: 500 },
+      { name: "oranges", quantity: 0 },
+      { name: "kiwi", quantity: 2 }
+   ];
+
+   function fruitsCallback({quantity}){
+      return quantity === 0 ? "Out of stock" : quantity === 2 ? "2 in stock" : "In stock";
+   }
+
+   const result = Object.groupBy(fruits, fruitsCallback);
+   console.log(result);
+
+   //Object Properties
+   
+   const gmail = {
+      userName : "neamoth", 
+      email: `${this.userName}@gmail.com`,
+      firstName : "Neamoth",
+      lastName : "Ullah",
+      counrty: "Bangladesh",
+      phoneNumber: "+8801789400417"
+   }
+   /* 
+      when value is false
+      writable - property is read only 
+      enumerable - property will be ignore and not read
+      configurable - can not config with writable or enumerable 
+   */
+   // Adding new properties and make it read only:
+   Object.defineProperty(gmail, "language", {value: "Bangla", writable : false});
+   //make some more
+   Object.defineProperty(gmail, "userName", {writable:false});
+   Object.defineProperty(gmail, "email", {writable:false});
+   
+   //Now check:
+   console.log(gmail.userName);
+   gmail.userName = "Neamoth2"; //it will not change
+   console.log(gmail.userName); // still neamoth
+
+   
+   //avoid any properties in object - enumerable
+   Object.defineProperty(gmail, "phoneNumber" ,{enumerable:false});
+   let checkEnumerable = [];
+   for(let keys in gmail){
+      checkEnumerable.push(keys);
+   }
+   console.log(checkEnumerable); // only name, firstName, lastName, country, language will be printed
+
+   //Prevanting changing any configuration in object
+   Object.defineProperty(gmail, "firstName", {configurable:false})
+
+   // Get/Set method in object:
+
+   const neamoth = {
+      firstName: "Neamoth",
+      lastName: "Ullah",
+      isWorking: "",
+      fullName: "",
+      get fullName(){
+         return this.firstName + " " + this.lastName;
+      }
+   }
+   
+   neamoth.isWorking = true;
+   console.log(neamoth.isWorking); //True
+   const mitu = {
+      firstName: "Mitu",
+      lastName: "Akter",
+      isWorking: "",
+      fullName: "",
+      get fullName(){
+         return this.firstName + " " + this.lastName;
+      }
+   }
+   
+   mitu.isWorking = true;
+   console.log(mitu.fullName+" "+mitu.isWorking); //Mitu akter and true
+
+   // Proper way to do this with class
+   class Names{
+      constructor(email, password){
+         this.email = email;
+         this.password = password;
+   
+      }
+      get password(){
+         return this._password.toUpperCase();
+      }
+      set password(newPassword){
+         this._password = newPassword;
+      }
+   }
+
+   const noor = new Names("Noor@gmail.com" , "NoorIsGoodGirl123");
+   console.log(noor.password);
+   
+   
+}
