@@ -1365,3 +1365,50 @@ Class in JavaScript`);
    //p1.address.apply(user1, "Laksham", "Bangladesh"); //TypeError: CreateListFromArrayLike called on non-object
    p1.address.apply(user1, list);    
 }
+
+
+{
+   // Class: two ways to define  a class
+
+   //Declearation:
+
+   class Person{
+      constructor(name, age, address){
+         this.name = name;
+         this.age = age;
+         this.address = address;
+      }
+
+      // using method in clss
+      display(){
+         console.log(`Name: ${this.name}`);
+         console.log(`Age: ${this.age}`);
+         console.log(`Address: ${this.address}`);
+      }
+   }
+
+   //Expression - without name, we can also name the class(ex. class Name)
+   const user = class{
+      constructor(userName, password){
+         this.userName = userName;
+         this.password = password;
+      }
+   }
+
+   // Class has temporal dead zone like let and const: ex.
+
+   //console.log(eNeamoth.name); // Uncaught ReferenceError: Cannot access 'eNeamoth' before initialization
+   /*
+      Because temporal dead zone Starts from here.
+      we will discuss it later
+   */  
+   class Employee{
+      constructor(name, depertment){
+         this.name = name;
+         this.depertment = depertment;
+      }
+   }
+   const eNeamoth = new Employee("Neamoth", "Software Engineering"); // so the temporal dead zone ends here
+   const p1 = new Person("Neamoth", 23, "Dhaka, Bangladesh");
+   p1.display();
+}
