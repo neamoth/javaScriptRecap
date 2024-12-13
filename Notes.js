@@ -1300,3 +1300,68 @@ Class in JavaScript`);
 }
 
 //new ssh key testing
+
+{  
+   //Invoking function
+   //window object
+
+   let m = func1();
+   function func1(){
+      return this;
+   }
+
+   console.log(x);
+
+   //use of this in a function:
+
+   const func2 = {
+      a : 4,
+      b : 5,
+      sum(){
+         console.log(this.a + this.b);
+      }
+   }
+   func2.sum(); // Output: 9
+
+   //Function call:
+
+   const person = {
+      fullName: function(city, country){
+         console.log(`${this.firstName}, ${this.lastName}, ${city}, ${country}`);
+      }
+   }
+   const person1 = {
+      firstName : "Neamoth",
+      lastName : "Ullah"
+   }
+   person.fullName.call(person1, "Dhaka", "Bangladesh");
+   /*
+   Here we call property in a object from another object.
+   this is difference between call and invoking.
+
+   when we invoke a function it call be call
+   but call is not same as invoking
+   */
+
+   /*
+   Apply in function - **apply and call are similar**
+
+   difference between:
+   call takes arguments separately but 
+   apply takes arguments as an array.
+   */
+
+   const list = ["Dhaka", "Bangladesh"];
+   const p1 ={
+      address(city,country){
+         console.log(this.name + " lives in " + city + ", " + country);
+      }
+   }
+   const user1 ={
+      name: "Neamoth",
+      age: 27
+   }
+
+   //p1.address.apply(user1, "Laksham", "Bangladesh"); //TypeError: CreateListFromArrayLike called on non-object
+   p1.address.apply(user1, list);    
+}
