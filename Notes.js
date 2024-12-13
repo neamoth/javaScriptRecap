@@ -1411,4 +1411,36 @@ Class in JavaScript`);
    const eNeamoth = new Employee("Neamoth", "Software Engineering"); // so the temporal dead zone ends here
    const p1 = new Person("Neamoth", 23, "Dhaka, Bangladesh");
    p1.display();
+
+   // Class inheritance: inherit is basically get DNA from your father
+
+   class Father {
+      constructor(firstName, age){
+         this.firstName = firstName;
+         this.lastName = 'Sardar';
+         this.age = age;
+      }
+      fullName(){
+         console.log(`Name: ${this.firstName} ${this.lastName}`);
+      }
+   }
+
+   class Child extends Father{
+      constructor(firstName, lastName, education){
+         
+         super(lastName);
+         console.log(this.lastName);
+         this.firstName = firstName;
+         this.education = education;
+      }
+      fullName(){
+         console.log(`Name: ${this.firstName} ${this.lastName}`);
+         
+      }
+   }
+
+   const salam = new Father('Abdus Salam', 57);
+   const neamoth = new Child('Neamoth', 'CSE');
+   neamoth.fullName();
+   salam.fullName();
 }
