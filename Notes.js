@@ -1443,4 +1443,22 @@ Class in JavaScript`);
    const neamoth = new Child('Neamoth', 'CSE');
    neamoth.fullName();
    salam.fullName();
+
+
+   // Static method: 
+
+   class StaticClass {
+      constructor(name){
+         this.name = name;
+         
+      }
+      static displayStatic(a){
+         console.log('Name: '+ a.name);
+         
+      }
+   }
+   const sc = new StaticClass('Neamoth Static');
+   //sc.display(); // throw type error because static method can not call with variable
+   StaticClass.displayStatic(sc);
+
 }
