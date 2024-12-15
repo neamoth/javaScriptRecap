@@ -1502,7 +1502,7 @@ Class in JavaScript`);
      //Async Pattern:
 
      const keyInsert = true;
-     const speed = 160;
+     const speed = 100;
      const newSpeed = 80;
      function engineStart(callback){
       console.log("Engine has been started");
@@ -1519,7 +1519,7 @@ Class in JavaScript`);
      function carRunning(callback){
       console.log(`Car Running at Speed of, ${speed}mph`);
       setTimeout(function(){
-         if(speed > 100){
+         if(speed >= 100){
             callback();  
          }else{
             console.log("Speed under Limit");            
@@ -1544,11 +1544,70 @@ Class in JavaScript`);
       }, 2000);
      }
 
-     engineStart(function(){
-        carRunning(function(){
-            slowDown(function(){
-                carStop();
-            });
-        });
-     });
+   //   engineStart(function(){
+   //      carRunning(function(){
+   //          slowDown(function(){
+   //              carStop();
+   //          });
+   //      });
+   //   });
+
+     //Promises in js -solving callback hell like the previous example
+     
+          console.log(`
+           
+           Solving With Promise
+           
+           `);
+     function carStarts(){
+      console.log("Checking for key..");
+      const promise = new Promise(function(resolve, reject){
+         setTimeout(function(){
+            if(keyInsert){
+               resolve();
+            }else{
+               reject("Key is not inserted.");
+            }
+         }, 2000);
+      });
+      return promise;
+     }
+
+     
+     function carRuns(){
+      console.log("Engine started, Car is running");
+      const promise = new Promise(function (resolve, reject){
+         setTimeout(function(){
+            if(speed < 100){              
+               resolve();
+            }else{
+               console.log(`Car Stopped for fine`);
+               reject(`You are getting ticket for ${speed}mph, Fine is: $200`);
+               
+            }
+         }, 2000);
+      });
+      
+      return promise;
+     }
+     function carStopped(){
+      console.log("Car reached the parking spot");
+      
+      const promise = new Promise(function(resolve){
+         setTimeout(function(){
+            resolve("Car is stopped");
+         },2000);
+      });
+
+      return promise;
+     }
+   //   carStarts()
+   //    .then(carRuns)
+   //    .then(carStopped)
+   //    .then(function(value){
+   //       console.log(value);         
+   //    })
+   //    .catch(function(error){
+   //       console.log(error);         
+   //    })
 }
