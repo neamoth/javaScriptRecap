@@ -1462,3 +1462,93 @@ Class in JavaScript`);
    StaticClass.displayStatic(sc);
 
 }
+
+{
+   //JS aysnc:
+
+   /*
+      Javascript callback: the concept of callback is
+      supose you have a function for operation and
+      a function for display. Now you want to control
+      the display function with operation function, wether
+      you want to display it or not. The job is done by
+      callback function.
+   */
+
+      //Simple example though is not the real one:
+
+      function display(value){
+         console.log(`Hello, ${value}....!`);
+      }
+
+      function operation(name, callback){
+         if(callback) callback(name);
+      }
+
+      operation('Neamoth', display); // So display will be hello, Neamoth....!
+
+      /* 
+      Asyn behavior: we know js behave like its execute code line by line
+      But its behave async with setTimeout function
+      */
+     console.log('1');
+     setTimeout(function(){
+        //console.log('2');
+     }, 2000);
+     console.log('3');
+
+     // here 2 will print after 2s as time given
+
+     //Async Pattern:
+
+     const keyInsert = true;
+     const speed = 160;
+     const newSpeed = 80;
+     function engineStart(callback){
+      console.log("Engine has been started");
+      setTimeout(function(){
+         if(keyInsert === true){
+            callback();
+            
+         }else{
+            console.log("Key insert unsuccessful");            
+         }
+      }, 2000);
+     }
+
+     function carRunning(callback){
+      console.log(`Car Running at Speed of, ${speed}mph`);
+      setTimeout(function(){
+         if(speed > 100){
+            callback();  
+         }else{
+            console.log("Speed under Limit");            
+         }
+      }, 2000);
+     }
+
+     function slowDown(callback){
+      console.log("Car slowing down");
+      setTimeout(function(){
+         if(newSpeed < 100){
+            callback();
+         }else{
+            console.log("Cops behind.. PULL OVER..!");         
+            console.log("Car Stopped and getting speed ticket");         
+         }
+      });
+     }
+     function carStop(){
+      setTimeout(function(){
+         console.log("Riched Home...!");
+      }, 2000);
+     }
+
+     engineStart(function(){
+        carRunning(function(){
+            slowDown(function(){
+                carStop();
+            });
+        });
+     });
+}
