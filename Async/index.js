@@ -10,13 +10,14 @@
         friedRice: 250
     }
     //Customer Input
-    const orderedItem = 'friedRice';
+    const orderedItem = 'burger';
     const customerPays = 330;
 
     //Store Convertions:
-    const price = Object.values(menu)[Object.keys(menu).findIndex(value => value.toLowerCase() === orderedItem.toLowerCase())];
-    const isAvailable = Object.keys(menu).some(value => value.toLowerCase() === orderedItem.toLowerCase());
- 
+    const matchOrderItem = Object.keys(menu).find(value => value.toLowerCase() === orderedItem.toLowerCase());
+    const price = menu[matchOrderItem]
+    const isAvailable = !!price
+    
     console.log("Please Place your Order");
     function order(){
         console.log("Order is processing, checking for stock...");
@@ -26,7 +27,7 @@
               if(isAvailable){
                  resolve();
               }else{
-                 reject("Sorry, the product is not available in stock.");
+                 reject(`Sorry, the ${orderedItem} is not available in stock.`);
               }
            }, 2000);
         });
@@ -51,9 +52,9 @@
         const promise = new Promise(function(resolve, reject){
             setTimeout(function(){
                 if ((customerPays - price) >= 0){
-                    resolve(`Food Delivery successfully and changes: ${customerPays - price}BDT`);
+                    resolve(`${orderedItem} Delivery successfully and changes: ${customerPays - price}BDT`);
                 }else{
-                    resolve(`Food Has been delivered`);
+                    resolve(`${orderedItem} Has been delivered`);
                 }
             }, 2000);
          });
