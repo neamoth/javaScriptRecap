@@ -10,3 +10,8 @@
     color: antiquewhite;
     min-height: 10vh;
 }
+
+button{
+    background-color: #fff;
+    color: black;
+}
