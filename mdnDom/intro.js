@@ -65,4 +65,51 @@ document.getElementById('firstChild').innerHTML = `1st child of ${parent.firstCh
 }
 
 
+//Events listeners
+//create button click me
+const button = document.createElement('button');
+button.className = 'btnEvents'
+button.textContent = "click me";
+document.body.appendChild(button);
+//create button remove
+const buttonC = document.createElement('button');
+buttonC.className = 'btnCEvents'
+buttonC.textContent = "Remove";
+document.body.appendChild(buttonC);
+//creating para
+const listenPera = document.createElement('p');
+listenPera.className = 'listenPera';
+//click to show
+button.addEventListener('click', function(){
+        listenPera.textContent = "Button clicked";
+        document.body.appendChild(listenPera);
+})
+// click to remove
+buttonC.addEventListener('click', function(){
+        document.body.removeChild(listenPera);
+})
 
+//Prevent default and stop propagation
+
+const google = document.getElementById('google');
+
+google.addEventListener('mouseover', function(event){
+        event.stopPropagation(); // stop the event from bubbling up to the parent
+        event.preventDefault(); // stop the link from opening
+        google.textContent = "Sorry you can i said";
+})
+google.addEventListener('mouseout', function(event){
+        google.textContent = "You cant go to google";
+})
+const anotherClick = document.getElementById('anotherClick')
+const dblClick = document.getElementById('dblClick');
+const dblContent = document.createElement('p')
+// anotherClick.appendChild(dblContent);
+dblClick.addEventListener('click', function(){
+        dblContent.textContent = "This secret is not free, Pay me 1000K first";
+        dblClick.textContent = "Close";
+});
+dblClick.addEventListener('dblClick', function(){
+        dblContent.textContent = "Thank you for Clicking me";
+        dblClick.textContent = "Reveal"
+});
