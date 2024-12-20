@@ -51,4 +51,18 @@ document.getElementById('firstChild').innerHTML = `1st child of ${parent.firstCh
 //lastChild nextSibling - lastChild target the last element and next sibling target next one
 
 
+{
+        //Create Remove and replay in dom
+
+        const callMe = document.createElement('div'); //Creating div
+        callMe.className = 'callMeContainer' // naming class
+        callMe.textContent = "Call Now..!" // giving a value
+
+        document.body.appendChild(callMe); // appending to body
+
+        // remove
+        // callMe.remove();
+}
+
+
 
