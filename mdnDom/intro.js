@@ -111,5 +111,5 @@ dblClick.addEventListener('click', function(){
 });
 dblClick.addEventListener('dblClick', function(){
         dblContent.textContent = "Thank you for Clicking me";
-        dblClick.textContent = "Reveal"
+        dblClick.textContent = "Reveal Text"
 });
