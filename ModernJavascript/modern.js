@@ -34,3 +34,23 @@
     // Arrow functions dont change or care about this so that's why if  I want to use this we can do it with arrow functions
     
 }
+
+{
+
+    //Truty and falsy value in ES6+
+
+    /*
+    Note: So we need to know what is truthy and falsy values are
+    Truthy values: true, 1, "hello", {}, [], new Date(), function(){}
+    Falsy values: false, 0, "", null, undefined, NaN
+    */
+
+    let check = "";
+
+    if(check){
+        console.log("Truthy value");
+    }
+    else{
+        console.log("Falsy value");
+    }
+}
