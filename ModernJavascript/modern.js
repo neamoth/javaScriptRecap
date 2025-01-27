@@ -54,3 +54,27 @@
         console.log("Falsy value");
     }
 }
+
+{
+    //Ternary operators:
+
+    //Traditional way: Must use for nested
+    let age = 1;
+
+    if (age >= 18){
+        console.log("You are adult");
+    }else{
+        console.log("You are not adult");
+    }
+
+    // ES6 way: Best for single line or 2 line of nested structure
+    
+    let ageStatus = (age >= 18) ? "Adult" : (age <= 12) ?"Child" :
+     "Not adult";
+    ;
+    console.log(ageStatus);
+
+    let isLoggedin = true;
+    let logout = !isLoggedin;
+    console.log(logout);
+}
