@@ -78,3 +78,51 @@
     let logout = !isLoggedin;
     console.log(logout);
 }
+
+{
+    // Array.prototype.find()
+
+    let numbers = [1,2,3,4,5,6,7,8,9,10];
+
+    let findNumber = numbers.find((value) => value > 5);
+    console.log(findNumber);
+    
+
+    // Array find index
+
+    let findIndex = numbers.findIndex((value) => value > 5);
+    console.log(findIndex); // index value is 5 found
+
+    let filter = numbers.filter((value) => value < findIndex);
+    console.log(filter);
+    
+    let slice = numbers.slice(-5); // count left to right
+    console.log(slice);
+
+    let splice = numbers.splice(1 ,2 , 11 ) // Remove 2, 3 and add 11 to main array
+    console.log(numbers);
+    console.log(splice);
+
+    let number1 = [12,13,14]
+    let concat = numbers.concat(number1); // this will not change the main array
+    console.log(concat); 
+    
+    let push = numbers.push(12); // change main array add into last index
+    console.log(numbers);
+    console.log(push); // return where it push mean after 10
+
+
+    //Map : loop trough array and return new array
+
+    let map = numbers.map((num) => num+1);
+    console.log(map);
+
+    //Reduce:
+
+    let reduceSumArray = numbers.reduce((preval, currentVal) => {
+        return preval + currentVal;
+    }, 0);
+
+    console.log(reduceSumArray);
+      
+}
