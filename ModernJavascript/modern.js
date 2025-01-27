@@ -124,5 +124,29 @@
     }, 0);
 
     console.log(reduceSumArray);
-      
+
+}
+
+{
+    //Loops
+
+    const details = {
+        firstName: 'Neamoth',
+        lastName: 'Ullah',
+        email: 'neamoth17@gmail.com',
+    }
+    
+    //For each
+    
+
+    for(let key in details) {
+        console.log(`Key: ${key} and Value: ${details[key]}`);
+    }
+
+    // for of
+
+    let arr = [1,2,3]
+    for(let keys of arr){
+        console.log(keys);
+    }
 }
