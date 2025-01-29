@@ -163,3 +163,17 @@
     console.log(myFunc(undefined)); // log 5, That will not overwrite the default value
     console.log(myFunc(null)); // log null, null is a value so it will overwrite the default value
 }
+{
+    //Spread operator
+
+    let number1 = [1,2,3,4];
+    let number2 = [...number1, 5,6,7,8]; // that will concate number1 to number2
+    console.log(number2); // number1+number2
+    console.log(number1); // That will be not change
+
+    let number3 = [9,10];
+
+    let makeConcate = [...number1, ...number2, ...number3];
+
+    console.log(makeConcate);   
+}
