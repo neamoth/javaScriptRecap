@@ -177,3 +177,14 @@
 
     console.log(makeConcate);   
 }
+
+{
+    //Rest operators
+
+    function sum(a, ...rest){
+        let carryRest = rest.reduce((preval, currentval) => preval + currentval);
+        return a + carryRest;
+    }
+
+    console.log(sum(1,2,3,4,5));
+}
