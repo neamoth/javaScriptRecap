@@ -188,3 +188,29 @@
 
     console.log(sum(1,2,3,4,5));
 }
+
+{
+    //Destructuring - use it to unpack values from arrays or properties from objects into distinct variables
+
+    //For object
+
+    const person = {
+        firstName: 'Neamoth',
+        lastName: 'Ullah',
+        age: 27,
+        educations: {
+            degree: 'Bachelor',
+            major: 'Computer Science',
+            graduationYear: 2024
+        }
+    }
+
+    const {firstName, educations: {degree}, age} = person;
+
+    console.log(`${firstName} is ${age} years old has ${degree} degree`);
+    
+    // For array
+    const numbers = [1,2,[3],4,5];
+    const [,a, [b]] = numbers;
+    console.log(a,b); //log 2,3
+}
