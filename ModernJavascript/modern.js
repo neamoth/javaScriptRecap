@@ -150,3 +150,16 @@
         console.log(keys);
     }
 }
+
+{
+    //functions default perameters
+
+    function myFunc(x =5){
+        return x;
+    }
+
+    console.log(myFunc()); // log 5
+    console.log(myFunc(10)); //log 10 and overwrite the default value
+    console.log(myFunc(undefined)); // log 5, That will not overwrite the default value
+    console.log(myFunc(null)); // log null, null is a value so it will overwrite the default value
+}
